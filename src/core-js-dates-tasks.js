@@ -32,7 +32,8 @@ function dateToTimestamp(date) {
  * Date(2015, 10, 20, 23, 15, 1) => '23:15:01'
  */
 function getTime(date) {
-  return date.toLocaleTimeString();
+  const time = 'hh:mm:ss'.length;
+  return new Date(date).toTimeString().slice(0, time);
 }
 
 /**
